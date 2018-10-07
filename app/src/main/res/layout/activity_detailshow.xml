@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Detailshow">
+    <!-- display two Button's and a FrameLayout to replace the Fragment's  -->
+
+    <ListView
+        android:id="@+id/listx"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight"
+        android:divider="#fff"
+        android:dividerHeight="2px"
+        android:gravity="start"
+        android:padding="17dp"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        android:typeface="serif" />
+</LinearLayout>
