@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-public class FourthFragment extends Fragment {
+public class Home_Remedies extends Fragment {
 
     View view;
     ListView listview;
@@ -36,9 +36,9 @@ public class FourthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_fourth, container, false);
+        view = inflater.inflate(R.layout.list_view, container, false);
         // get the reference of Button
-        listview = (ListView) view.findViewById(R.id.l1);
+        listview = (ListView) view.findViewById(R.id.list);
         // perform setOnClickListener on first Button
         ArrayAdapter<String> fu=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,homeRemediesTips);
         listview.setAdapter(fu);

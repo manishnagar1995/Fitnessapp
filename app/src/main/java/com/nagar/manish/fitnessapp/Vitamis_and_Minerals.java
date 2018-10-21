@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-public class FiifthFragment extends Fragment {
+public class Vitamis_and_Minerals extends Fragment {
     View view;
     GridView lst;
    static int m=15;
-    Customclass adapter;
+    Customclass adap8ter;
 
 
     String[] web = {
@@ -48,8 +48,8 @@ public class FiifthFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_fifth, container, false);
-        lst = (GridView) view.findViewById(R.id.list);
+        view = inflater.inflate(R.layout.gird_view, container, false);
+        lst = (GridView) view.findViewById(R.id.grid);
 
         Customclass adapter=new Customclass(getActivity(),web,imageId);
         lst.setAdapter(adapter);

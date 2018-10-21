@@ -1,6 +1,7 @@
 package com.nagar.manish.fitnessapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,41 +21,14 @@ public class Mainfragment extends Fragment {
 
     String[] web = {
             "Health Tips",
-            "Nutrition Tips",
-            "Health Recipie",
-            "Home Remedies",
-            "Vitamin and Minerals",
             "Health and Nutrition",
             "Vitamin A"
-            /*"Vitamin B",
-            "Vitamin C",
-            "Vitamin D",
-            "Vitamin E",
-            "Vitamin B12",
-            "Calcium",
-            "Iron",
-            "Magnesium",
-            "Fiber"*/
 
     } ;
     int[] imageId = {
-            R.drawable.healthtips,
-            R.drawable.nutrition,
-            R.drawable.healthrecipe,
-            R.drawable.rhrf,
-            R.drawable.vitamin,
+            R.drawable.bmic,
             R.drawable.youtub,
             R.drawable.vitamina
-            /*R.drawable.vitab,
-            R.drawable.vitaminc,
-            R.drawable.vitamind,
-            R.drawable.vitamine,
-            R.drawable.vitamind,
-            R.drawable.ca,
-            //   R.drawable.phosphorus,
-            R.drawable.iron,
-            R.drawable.magnesium,
-            R.drawable.fiber*/
 
     };
 
@@ -76,7 +50,16 @@ public class Mainfragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(getActivity(),"You Clicked at "+web[position]+" "+position, Toast.LENGTH_SHORT).show();
+                c=position;
+                switch (c)
+                {
+                    case 0:
+                        Intent A=new Intent(getActivity(),BMICalculator.class);
+                        startActivity(A);
+                        break;
+                }
+
+
 
             }
         });

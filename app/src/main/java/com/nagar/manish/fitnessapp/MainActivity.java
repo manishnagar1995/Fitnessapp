@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity
                 drawer.closeDrawer(navigationView);
 
                if(id== R.id.healthtips) {
-                   FirstFragment mainfragment = new FirstFragment();
+                   Health_tips mainfragment = new Health_tips();
                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
                }
                else if(id== R.id.nutrition)
                {
-                   SecondFragment mainfragment = new SecondFragment();
+                   Nutrition_Tips mainfragment = new Nutrition_Tips();
                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity
                }
                else if(id== R.id.recipe)
                {
-                  ThirdFragment mainfragment = new ThirdFragment();
+                  Health_Recipie mainfragment = new Health_Recipie();
                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity
                }
                else if(id== R.id.remedies)
                {
-                   FourthFragment mainfragment = new FourthFragment();
+                   Home_Remedies mainfragment = new Home_Remedies();
                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity
                }
                else if(id== R.id.vitamins)
                {
-                   FiifthFragment mainfragment = new FiifthFragment();
+                   Vitamis_and_Minerals mainfragment = new Vitamis_and_Minerals();
                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");

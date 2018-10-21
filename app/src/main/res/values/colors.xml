@@ -10,5 +10,9 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorDivider">#b6b6b6</color>
     <color name="pink">#FF69B4</color>
+    <color name="colorGreen">#99FF00</color>
+    <color name="colorBlue">#0399E4</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="myColor">#FFEB89</color>
 
 </resources>

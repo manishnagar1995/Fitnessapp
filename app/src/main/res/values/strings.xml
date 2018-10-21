@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Health And Nutrition</string>
+    <string name="app_name">Fitness app</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,4 +8,21 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_button_calculate">Calculate</string>
+    <string name="text_button_exit">Reset</string>
+    <string name="default_show_result"> </string>
+    <string name="default_show_bmi"> Enter weight (kg) and height (m) </string>
+
+    <string name="text_label_kg">kg</string>
+    <string name="text_label_m">m</string>
+
+    <string name="content_button_calculate">Calculate your BMI</string>
+    <string name="content_button_exit">Exit application</string>
+    <string name="content_show_result"> </string>
+    <string name="content_show_bmi"> </string>
+    <string name="content_user_answer">Key your weight as Kg</string>
+
+    <string name="ok">OK</string>
+    <string name="alert">BMI CALCULATOR</string>
+
 </resources>

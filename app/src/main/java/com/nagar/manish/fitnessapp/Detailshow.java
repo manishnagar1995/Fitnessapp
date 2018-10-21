@@ -462,129 +462,131 @@ public class Detailshow extends AppCompatActivity {
 
         l1 = (ListView) findViewById(R.id.listx);
 
-        FirstFragment fs = new FirstFragment();
+        Health_tips health_tips = new Health_tips();
 
-        switch (fs.c) {
+        switch (health_tips.c) {
             case 0:
+                health_tips.c=15;
                 ArrayAdapter<String> as1 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[0]);
                 l1.setAdapter(as1);
-                fs.c=15;
                 break;
             case 1:
+                health_tips.c=15;
                 ArrayAdapter<String> as2 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[1]);
                 l1.setAdapter(as2);
-                fs.c=15;
                 break;
             case 2:
                 ArrayAdapter<String> as3 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[2]);
                 l1.setAdapter(as3);
-                fs.c=15;
+                health_tips.c=15;
                 break;
             case 3:
+                health_tips.c=15;
                 ArrayAdapter<String> as4 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[3]);
                 l1.setAdapter(as4);
-                fs.c=15;
                 break;
             case 4:
+                health_tips.c=15;
                 ArrayAdapter<String> as5 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[4]);
                 l1.setAdapter(as5);
-                fs.c=15;
                 break;
             case 5:
+                health_tips.c=15;
                 ArrayAdapter<String> as6 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[5]);
                 l1.setAdapter(as6);
-                fs.c=15;
                 break;
             case 6:
+                health_tips.c=15;
                 ArrayAdapter<String> as7 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[6]);
                 l1.setAdapter(as7);
-                fs.c=15;
                 break;
             case 7:
+                health_tips.c=15;
                 ArrayAdapter<String> as8 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[7]);
-                l1.setAdapter(as8);
-                fs.c=15;
+
                 break;
             case 8:
+                health_tips.c=15;
                 ArrayAdapter<String> as9 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[8]);
                 l1.setAdapter(as9);
-                fs.c=15;
+
                 break;
             case 9:
+                health_tips.c=15;
                 ArrayAdapter<String> as10 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, First[9]);
                 l1.setAdapter(as10);
-                fs.c=15;
+
                 break;
         }
-        SecondFragment sec = new SecondFragment();
+        Nutrition_Tips nutrition_tips = new Nutrition_Tips();
 
-        switch (sec.k) {
+        switch (nutrition_tips.k) {
             case 0:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap1 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[0]);
                 l1.setAdapter(ap1);
                 break;
             case 1:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap2 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[1]);
                 l1.setAdapter(ap2);
                 break;
             case 2:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap3 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[2]);
                 l1.setAdapter(ap3);
                 break;
             case 3:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap4 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[3]);
                 l1.setAdapter(ap4);
                 break;
             case 4:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap5= new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[4]);
                 l1.setAdapter(ap5);
                 break;
             case 5:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap6 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[5]);
                 l1.setAdapter(ap6);
                 break;
             case 6:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap7 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[6]);
                 l1.setAdapter(ap7);
                 break;
             case 7:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap8 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[7]);
                 l1.setAdapter(ap8);
                 break;
             case 8:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap9 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[8]);
                 l1.setAdapter(ap9);
                 break;
             case 9:
-                sec.k=15;
+                nutrition_tips.k=15;
                 ArrayAdapter<String> ap10 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[9]);
                 l1.setAdapter(ap10);
@@ -593,60 +595,60 @@ public class Detailshow extends AppCompatActivity {
 
 
 
-        FourthFragment se = new FourthFragment();
+        Home_Remedies home_remedies = new Home_Remedies();
 
-        switch (se.b) {
+        switch (home_remedies.b) {
 
             case 1:
-                se.b=15;
+                home_remedies.b=15;
                 ArrayAdapter<String> ap2 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1,Remedies[0]);
                 l1.setAdapter(ap2);
                 break;
             case 2:
-                se.b=15;
+                home_remedies.b=15;
                 ArrayAdapter<String> ap3 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, Remedies[1]);
                 l1.setAdapter(ap3);
                 break;
             case 3:
-                se.b=15;
+                home_remedies.b=15;
                 ArrayAdapter<String> ap4 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, Remedies[2]);
                 l1.setAdapter(ap4);
                 break;
             case 4:
-                se.b=15;
+                home_remedies.b=15;
                 ArrayAdapter<String> ap5= new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, Remedies[3]);
                 l1.setAdapter(ap5);
                 break;
             case 5:
-                se.b=15;
+                home_remedies.b=15;
                 ArrayAdapter<String> ap6 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, Remedies[4]);
                 l1.setAdapter(ap6);
                 break;
             case 6:
-                se.b=15;
+                home_remedies.b=15;
                 ArrayAdapter<String> ap7 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, nutrition[5]);
                 l1.setAdapter(ap7);
                 break;
             case 7:
-                se.b=15;
+                home_remedies.b=15;
                 ArrayAdapter<String> ap8 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1,Remedies[6]);
                 l1.setAdapter(ap8);
                 break;
             case 8:
-                se.b=15;
+                home_remedies.b=15;
                 ArrayAdapter<String> ap9 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, Remedies[7]);
                 l1.setAdapter(ap9);
                 break;
             case 9:
-                se.b=15;
+                home_remedies.b=15;
                 ArrayAdapter<String> ap10 = new ArrayAdapter<String>(Detailshow.this,
                         android.R.layout.simple_list_item_1, Remedies[8]);
                 l1.setAdapter(ap10);

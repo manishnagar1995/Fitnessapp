@@ -12,9 +12,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-public class SecondFragment extends Fragment {
+public class Nutrition_Tips extends Fragment {
 
-    public SecondFragment() {
+    public Nutrition_Tips() {
         // Required empty public constructor
     }
 
@@ -40,9 +40,9 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_second, container, false);
+        view = inflater.inflate(R.layout.list_view, container, false);
         // get the reference of Button
-        listview = (ListView) view.findViewById(R.id.l1);
+        listview = (ListView) view.findViewById(R.id.list);
         // perform setOnClickListener on first Button
         ArrayAdapter<String> nu=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,nutritonTips);
         listview.setAdapter(nu);

@@ -10,7 +10,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 
-public class ThirdFragment extends Fragment {
+public class Health_Recipie extends Fragment {
         View view;
         GridView lst;
         static int h=15;
@@ -23,27 +23,22 @@ public class ThirdFragment extends Fragment {
                 "Berry Peachy Smoothy",
                 "Broccoli and bacon pilaf lge",
                 "Gimme Leansausage Burrito",
-               // "Cottage Pie",
                 "Dal Kabila",
                 "Egg Casserole",
                 "Garlic Chicken",
                 "Lentil and giner soup",
                 "Lowfatreipes",
-              //"Salmon with apple slaw",
-              //  "Tofu scramble"
-              // "Salmon chourcruote"
-        } ;
+             } ;
         Integer[] imageId = {
                R.drawable.asparagussoup,
                 R.drawable.cherrysalad,
                 R.drawable.berrypeachysmoothy,
                 R.drawable.broccoliandbaconpilaflge,
                 R.drawable.gimmeleansausageburrito,
-              //  R.drawable.cottagepie,
                 R.drawable.dalkabila,
-                R.drawable.apple,
+                R.drawable.eggcasserole,
                 R.drawable.garlicchicken,
-                R.drawable.cherrysalad,
+                R.drawable.lentisoup,
                 R.drawable.loow,
 
         };
@@ -52,11 +47,11 @@ public class ThirdFragment extends Fragment {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            view = inflater.inflate(R.layout.fragment_third, container, false);
-            lst = (GridView) view.findViewById(R.id.list);
+            view = inflater.inflate(R.layout.gird_view, container, false);
+           lst = (GridView) view.findViewById(R.id.grid);
 
-            adap=new Customclass(getActivity(),web,imageId);
-            lst.setAdapter(adap);
+           adap=new Customclass(getActivity(),web,imageId);
+           lst.setAdapter(adap);
 
             lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override

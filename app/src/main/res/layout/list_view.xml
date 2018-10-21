@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SecondFragment">
+    tools:context=".Nutrition_Tips">
     <!-- display two Button's and a FrameLayout to replace the Fragment's  -->
 
     <ListView
-        android:id="@+id/l1"
+        android:layout_marginTop="50dp"
+        android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/darker_gray"

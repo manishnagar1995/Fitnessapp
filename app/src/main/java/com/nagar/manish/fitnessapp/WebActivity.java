@@ -29,10 +29,10 @@ public class WebActivity extends AppCompatActivity {
         p = (ProgressBar) findViewById(R.id.progressbar);
         w = (WebView) findViewById(R.id.webview);
 
-       SecondFragment sec=new SecondFragment();
-        FourthFragment fs=new FourthFragment();
-       ThirdFragment td= new ThirdFragment();
-       FiifthFragment fv=new FiifthFragment();
+       Nutrition_Tips sec=new Nutrition_Tips();
+        Home_Remedies fs=new Home_Remedies();
+       Health_Recipie td= new Health_Recipie();
+       Vitamis_and_Minerals fv=new Vitamis_and_Minerals();
 
         switch (sec.k)
         {
