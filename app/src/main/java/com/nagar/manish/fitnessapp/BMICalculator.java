@@ -45,40 +45,71 @@ public class BMICalculator extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(inputKg.length()!=0 &&inputM.length()!=0)
+                {
                try {
                    kg = Double.parseDouble(inputKg.getText().toString());
                    m = Double.parseDouble(inputM.getText().toString());
+                   if(10 <= kg && kg <=200 && 0.5<=m && m<= 2.5)
+                   {
 
-                   metricFormula = new MetricFormula(kg, m);
-                   imperialFormula = new ImperialFormula(kg, m);
+                       metricFormula = new MetricFormula(kg, m);
+                       imperialFormula = new ImperialFormula(kg, m);
+                       showImpBMI.setText("In imperial formula: " + String.valueOf(TWO_DECIMAL_PLACES.format(imperialFormula.computeBMI(imperialFormula.getInputKg(), imperialFormula.getInputM()))));
+                       showBMI.setText("BMI = " + String.valueOf(TWO_DECIMAL_PLACES.format(metricFormula.computeBMI(metricFormula.getInputKg(), metricFormula.getInputM()))));
 
-
-                   showBMI.setText("BMI = " + String.valueOf(TWO_DECIMAL_PLACES.format(metricFormula.computeBMI(metricFormula.getInputKg(), metricFormula.getInputM()))));
-                   showImpBMI.setText("In imperial formula: " + String.valueOf(TWO_DECIMAL_PLACES.format(imperialFormula.computeBMI(imperialFormula.getInputKg(), imperialFormula.getInputM()))));
+                   }
+                   else
+                   {
+                       AlertDialog alertDialog = new AlertDialog.Builder(BMICalculator.this,R.style.MyDialogTheme).create();
+                       alertDialog.setTitle(getString(R.string.alert));
+                       alertDialog.setMessage("MASS SHOULD BE BETWEEN:\n" + "minMass = 10 kg\n" + "maxMass = 200 kg\n"+"HEIGHT SHOULD BE BETWEEN:\n"+
+                       "minHeight = 0.5 m\n"+"maxHeight = 2.5 m" +
+                               "");
+                       alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok),
+                               new DialogInterface.OnClickListener() {
+                                   public void onClick(DialogInterface dialog, int which) {
+                                       dialog.dismiss();}
+                               });
+                       alertDialog.show();
+                   }
                    showResult.setText(bmiCategory.getCategory(metricFormula.computeBMI(metricFormula.getInputKg(), metricFormula.getInputM())));
                }
                catch (Exception e)
                {
-                   AlertDialog alertDialog = new AlertDialog.Builder(BMICalculator.this,R.style.MyDialogTheme).create();
-                   alertDialog.setTitle(getString(R.string.alert));
-                   alertDialog.setMessage("ENTER MASS AND HEIGHT");
-                   alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok),
-                           new DialogInterface.OnClickListener() {
-                               public void onClick(DialogInterface dialog, int which) {
-                                   dialog.dismiss();}
-                   });
-                   alertDialog.show();
+                   e.printStackTrace();
+                    }}
+               else
+                {
+                    AlertDialog alertDialog = new AlertDialog.Builder(BMICalculator.this,R.style.MyDialogTheme).create();
+                    alertDialog.setTitle(getString(R.string.alert));
+                    alertDialog.setMessage("ENTER MASS AND HEIGHT");
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();}
+                            });
+                    alertDialog.show();
 
-               }
+
+                }
             }
         });
 
         buttonExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showBMI.setText("");
-                showBMI.setText("");
+
+               try{ inputKg.setText("");
+                inputM.setText("");
+                showBMI.setText("BMI = " + String.valueOf(TWO_DECIMAL_PLACES.format(metricFormula.computeBMI(metricFormula.getInputKg(), metricFormula.getInputM()))));
+                showImpBMI.setText("");
                 showResult.setText("");
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
             }
         });
 
