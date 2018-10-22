@@ -20,14 +20,14 @@ public class Mainfragment extends Fragment {
 
 
     String[] web = {
-            "Health Tips",
-            "Health and Nutrition",
+            "BMI",
+            "Notpad",
             "Vitamin A"
 
     } ;
     int[] imageId = {
             R.drawable.bmic,
-            R.drawable.youtub,
+            R.drawable.ic_note_add_black_48dp,
             R.drawable.vitamina
 
     };
@@ -54,8 +54,12 @@ public class Mainfragment extends Fragment {
                 switch (c)
                 {
                     case 0:
-                        Intent A=new Intent(getActivity(),BMICalculator.class);
-                        startActivity(A);
+                        Intent A0=new Intent(getActivity(),BMICalculator.class);
+                        startActivity(A0);
+                        break;
+                    case 1:
+                        Intent A1=new Intent(getActivity(),Notepad.class);
+                        startActivity(A1);
                         break;
                 }
 

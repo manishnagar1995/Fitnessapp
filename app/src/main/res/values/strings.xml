@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Fitness app</string>
+    <string name="Fitness">Fitness</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,8 +9,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="text_button_calculate">Calculate</string>
-    <string name="text_button_exit">Reset</string>
+    <string name="Reset">Reset</string>
     <string name="default_show_result"> </string>
     <string name="default_show_bmi"> Enter weight (kg) and height (m) </string>
 
@@ -24,5 +26,17 @@
 
     <string name="ok">OK</string>
     <string name="alert">BMI CALCULATOR</string>
+
+
+    <string name="action_delete_all">Delete All</string>
+    <string name="save_settings">Save</string>
+    <string name="delete_settings">Delete</string>
+
+    <string name="Notepad">Notepad</string>
+    <string name="change_task">Change Task</string>
+    <string name="delete_dialog_msg">Do you want to delete all TODO Task</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+
 
 </resources>
