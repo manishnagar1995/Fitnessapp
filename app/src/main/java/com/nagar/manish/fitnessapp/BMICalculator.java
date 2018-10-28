@@ -116,7 +116,7 @@ public class BMICalculator extends AppCompatActivity {
                 inputM.setText("");
                 age.setText("");
                 radioGroup.clearCheck();
-                
+
                 showBMI.setText("");
                 showImpBMI.setText("");
                 showResult.setText("");
