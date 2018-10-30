@@ -22,13 +22,13 @@ public class Mainfragment extends Fragment {
     String[] web = {
             "BMI",
             "Notpad",
-            "Vitamin A"
+            "Recoder"
 
     } ;
     int[] imageId = {
             R.drawable.bmic,
             R.drawable.ic_note_add_black_48dp,
-            R.drawable.vitamina
+            R.drawable.recoder
 
     };
 
@@ -60,6 +60,11 @@ public class Mainfragment extends Fragment {
                     case 1:
                         Intent A1=new Intent(getActivity(),Notepad.class);
                         startActivity(A1);
+                        break;
+
+                    case 2:
+                        Intent A2=new Intent(getActivity(),VoiceRecoder.class);
+                        startActivity(A2);
                         break;
                 }
 

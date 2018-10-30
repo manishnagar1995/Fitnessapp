@@ -22,16 +22,17 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/Notepad"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Detailshow" />
-        <activity android:name=".Main2Activity" />
         <activity android:name=".WebActivity" />
         <activity android:name=".BMICalculator" />
-        <activity android:name=".Notepad"
-            android:label="@string/Notepad"/>
-        <activity android:name=".NoteActivity"
-            android:label="@string/change_task"></activity>
+        <activity
+            android:name=".Notepad"
+            android:label="@string/Notepad" />
+        <activity
+            android:name=".NoteActivity"
+            android:label="@string/change_task" />
+        <activity android:name=".VoiceRecoder"></activity>
     </application>
 
 </manifest>
