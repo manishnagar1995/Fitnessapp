@@ -22,13 +22,13 @@ public class Mainfragment extends Fragment {
     String[] web = {
             "BMI",
             "Notpad",
-            "Recoder"
+           "Recoder"
 
     } ;
     int[] imageId = {
             R.drawable.bmic,
             R.drawable.ic_note_add_black_48dp,
-            R.drawable.recoder
+            R.drawable.images
 
     };
 
