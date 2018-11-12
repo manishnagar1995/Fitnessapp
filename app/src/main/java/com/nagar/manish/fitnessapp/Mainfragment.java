@@ -22,13 +22,15 @@ public class Mainfragment extends Fragment {
     String[] web = {
             "BMI",
             "Notpad",
-           "Recoder"
+           "Recoder",
+            "StopWatch"
 
     } ;
     int[] imageId = {
             R.drawable.bmic,
             R.drawable.ic_note_add_black_48dp,
-            R.drawable.images
+            R.drawable.images,
+            R.drawable.stopwatch
 
     };
 
@@ -45,6 +47,7 @@ public class Mainfragment extends Fragment {
         adapter = new CardAdapter(getActivity(),imageId,web);
         list=(GridView) view.findViewById(R.id.list);
         list.setAdapter(adapter);
+//        list.setAlpha(alpha);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -65,6 +68,10 @@ public class Mainfragment extends Fragment {
                     case 2:
                         Intent A2=new Intent(getActivity(),VoiceRecoder.class);
                         startActivity(A2);
+                        break;
+                    case 3:
+                        Intent A3=new Intent(getActivity(),StopWatch.class);
+                        startActivity(A3);
                         break;
                 }
 

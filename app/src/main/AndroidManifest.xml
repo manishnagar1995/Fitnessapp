@@ -32,7 +32,8 @@
         <activity
             android:name=".NoteActivity"
             android:label="@string/change_task" />
-        <activity android:name=".VoiceRecoder"></activity>
+        <activity android:name=".VoiceRecoder" />
+        <activity android:name=".StopWatch"></activity>
     </application>
 
 </manifest>
