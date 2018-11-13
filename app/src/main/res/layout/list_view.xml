@@ -9,9 +9,11 @@
     <ListView
         android:layout_marginTop="50dp"
         android:id="@+id/list"
+        android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/darker_gray"
+        android:background="#F8E9A6"
         android:divider="#fff"
+        android:layout_marginBottom="50dp"
         android:dividerHeight="2px" />
 </LinearLayout>

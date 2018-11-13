@@ -8,11 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 
 
 public class Health_Recipie extends Fragment {
         View view;
-        GridView lst;
+        ListView lst;
         static int h=15;
         Customclass adap;
 
@@ -48,7 +50,7 @@ public class Health_Recipie extends Fragment {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             view = inflater.inflate(R.layout.gird_view, container, false);
-           lst = (GridView) view.findViewById(R.id.grid);
+           lst = (ListView) view.findViewById(R.id.grid);
 
            adap=new Customclass(getActivity(),web,imageId);
            lst.setAdapter(adap);

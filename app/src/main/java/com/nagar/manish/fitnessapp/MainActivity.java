@@ -6,8 +6,10 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity
     Toolbar toolbar = null;
     static int id;
     ActionBarDrawerToggle toggle;
+    BottomNavigationView bottomBar;
 
     Activity activity;
 
@@ -34,10 +37,44 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         Mainfragment mainfragment = new Mainfragment();
-        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, mainfragment);
         fragmentTransaction.commit();
 
+       bottomBar=(BottomNavigationView) findViewById(R.id.bottomBar);
+        bottomBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId())
+                {
+                    case R.id.main:
+                        Mainfragment mainfragment = new Mainfragment();
+                        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.fragment_container, mainfragment);
+                        fragmentTransaction.commit();
+                        break;
+                    case R.id.note:
+                        Intent i=new Intent(MainActivity.this,Notepad.class);
+                        startActivity(i);
+                        break;
+                    case R.id.watch:
+                        Intent i1=new Intent(MainActivity.this,StopWatch.class);
+                        startActivity(i1);
+                        break;
+                    case R.id.recoder:
+                        Intent i2=new Intent(MainActivity.this,VoiceRecoder.class);
+                        startActivity(i2);
+                        break;
+                    case R.id.calc:
+                        Intent i3=new Intent(MainActivity.this,BMICalculator.class);
+                        startActivity(i3);
+                        break;
+
+                }
+                return false;
+            }
+        });
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -65,7 +102,7 @@ public class MainActivity extends AppCompatActivity
 
                if(id== R.id.healthtips) {
                    Health_tips mainfragment = new Health_tips();
-                   android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                   FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");
                    fragmentTransaction.commit();
@@ -73,7 +110,7 @@ public class MainActivity extends AppCompatActivity
                else if(id== R.id.nutrition)
                {
                    Nutrition_Tips mainfragment = new Nutrition_Tips();
-                   android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                   FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");
                    fragmentTransaction.commit();
@@ -81,7 +118,7 @@ public class MainActivity extends AppCompatActivity
                else if(id== R.id.recipe)
                {
                   Health_Recipie mainfragment = new Health_Recipie();
-                   android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                   FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");
                    fragmentTransaction.commit();
@@ -89,7 +126,7 @@ public class MainActivity extends AppCompatActivity
                else if(id== R.id.remedies)
                {
                    Home_Remedies mainfragment = new Home_Remedies();
-                   android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                   FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");
                    fragmentTransaction.commit();
@@ -97,7 +134,7 @@ public class MainActivity extends AppCompatActivity
                else if(id== R.id.vitamins)
                {
                    Vitamis_and_Minerals mainfragment = new Vitamis_and_Minerals();
-                   android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                   FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                    fragmentTransaction.replace(R.id.fragment_container, mainfragment);
                    fragmentTransaction.addToBackStack("Mainfragment");
                    fragmentTransaction.commit();

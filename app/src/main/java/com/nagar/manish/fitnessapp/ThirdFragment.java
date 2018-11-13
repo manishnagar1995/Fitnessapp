@@ -8,11 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListView;
 
 
 public class ThirdFragment extends Fragment {
         View view;
-        GridView lst;
+        ListView lst;
         static int h=15;
         Customclass adap;
 
@@ -53,7 +54,7 @@ public class ThirdFragment extends Fragment {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             view = inflater.inflate(R.layout.fragment_third, container, false);
-            lst = (GridView) view.findViewById(R.id.list);
+            lst = (ListView) view.findViewById(R.id.list);
 
             adap=new Customclass(getActivity(),web,imageId);
             lst.setAdapter(adap);

@@ -10,7 +10,8 @@
         android:id="@+id/l1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorDivider"
+        android:background="#F8E9A6"
         android:divider="#fff"
+        android:layout_marginBottom="50dp"
         android:dividerHeight="2px" />
 </LinearLayout>
