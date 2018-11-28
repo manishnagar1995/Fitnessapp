@@ -12,7 +12,7 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        ThirdFragment mainfragment = new ThirdFragment();
+        Health_Recipie mainfragment = new Health_Recipie();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, mainfragment);
         fragmentTransaction.commit();

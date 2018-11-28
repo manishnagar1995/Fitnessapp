@@ -27,9 +27,9 @@ public class Health_Recipie extends Fragment {
                 "Gimme Leansausage Burrito",
                 "Dal Kabila",
                 "Egg Casserole",
-                "Garlic Chicken",
-                "Lentil and giner soup",
-                "Lowfatreipes",
+                "Garlic Chicken"
+            //    "Lentil and giner soup",
+            //    "Lowfatreipes",
              } ;
         Integer[] imageId = {
                R.drawable.asparagussoup,
@@ -40,8 +40,8 @@ public class Health_Recipie extends Fragment {
                 R.drawable.dalkabila,
                 R.drawable.eggcasserole,
                 R.drawable.garlicchicken,
-                R.drawable.lentisoup,
-                R.drawable.loow,
+             //   R.drawable.lentisoup,
+            //    R.drawable.loow,
 
         };
 
@@ -52,8 +52,10 @@ public class Health_Recipie extends Fragment {
             view = inflater.inflate(R.layout.gird_view, container, false);
            lst = (ListView) view.findViewById(R.id.grid);
 
+
            adap=new Customclass(getActivity(),web,imageId);
            lst.setAdapter(adap);
+
 
             lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override

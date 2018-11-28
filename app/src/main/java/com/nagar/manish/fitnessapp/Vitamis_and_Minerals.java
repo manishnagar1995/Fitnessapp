@@ -25,11 +25,11 @@ public class Vitamis_and_Minerals extends Fragment {
             "Vitamin C",
             "Vitamin D",
             "Vitamin E",
-            "Vitamin B12",
+        //    "Vitamin B12",
             "Calcium",
-            "Iron",
-            "Magnesium",
-            "Fiber"
+            "Iron"
+         //   "Magnesium",
+         //   "Fiber"
 
     } ;
     Integer[] imageId = {
@@ -38,12 +38,12 @@ public class Vitamis_and_Minerals extends Fragment {
             R.drawable.vitaminc,
             R.drawable.vitamind,
             R.drawable.vitamine,
-            R.drawable.vitamind,
+       //     R.drawable.vitamind,
             R.drawable.ca,
          //   R.drawable.phosphorus,
-            R.drawable.iron,
-            R.drawable.magnesium,
-            R.drawable.fiber
+            R.drawable.iron
+          //  R.drawable.magnesium,
+          //  R.drawable.fiber
     };
 
 

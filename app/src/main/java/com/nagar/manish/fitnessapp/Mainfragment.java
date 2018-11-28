@@ -72,6 +72,7 @@ public class Mainfragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
+
                 c=position;
                 switch (c)
                 {
@@ -92,16 +93,7 @@ public class Mainfragment extends Fragment {
                         fragmentTransaction1.addToBackStack("Mainfragment");
                         fragmentTransaction1.commit();
                         break;
-
                     case 2:
-                        Nutrition_Tips mainfragment2 = new Nutrition_Tips();
-                        FragmentManager fragmentManager2 = getActivity().getSupportFragmentManager();
-                        FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
-                        fragmentTransaction2.replace(R.id.fragment_container, mainfragment2);
-                        fragmentTransaction2.addToBackStack("Mainfragment");
-                        fragmentTransaction2.commit();
-                        break;
-                    case 3:
                         Health_Recipie mainfragment3 = new Health_Recipie();
                         FragmentManager fragmentManager3 = getActivity().getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction3 = fragmentManager3.beginTransaction();
@@ -109,7 +101,7 @@ public class Mainfragment extends Fragment {
                         fragmentTransaction3.addToBackStack("Mainfragment");
                         fragmentTransaction3.commit();
                         break;
-                    case 4:
+                    case 3:
                         Home_Remedies mainfragment4 = new Home_Remedies();
                         FragmentManager fragmentManager4 = getActivity().getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction4 = fragmentManager4.beginTransaction();
@@ -117,7 +109,7 @@ public class Mainfragment extends Fragment {
                         fragmentTransaction4.addToBackStack("Mainfragment");
                         fragmentTransaction4.commit();
                         break;
-                    case 5:
+                    case 4:
                         Vitamis_and_Minerals mainfragment5 = new Vitamis_and_Minerals();
                         FragmentManager fragmentManager5 = getActivity().getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction5 = fragmentManager5.beginTransaction();
@@ -125,10 +117,12 @@ public class Mainfragment extends Fragment {
                         fragmentTransaction5.addToBackStack("Mainfragment");
                         fragmentTransaction5.commit();
                         break;
-                    case 6:
+                    case 5:
                         Intent intent1 = new Intent(getActivity(),WebActivity.class);
                         startActivity(intent1);
                         break;
+                        default:
+                            break;
                 }
 
 
