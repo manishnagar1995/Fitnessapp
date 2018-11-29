@@ -8,6 +8,10 @@ import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +27,7 @@ public class Mainfragment extends Fragment {
   View view;
     GridView list;
    BottomBar bottomBar;
+   RecyclerView recyclerView;
     int c;
     CardAdapter adapter;
 
@@ -63,11 +68,14 @@ public class Mainfragment extends Fragment {
 
    //   view = inflater.inflate(R.layout.fragment_mainfragment, container, false);
 
-        adapter = new CardAdapter(getActivity(),imageId,web);
-        list=(GridView) view.findViewById(R.id.list);
-        list.setAdapter(adapter);
+        adapter = new CardAdapter(getContext(),imageId,web);
+        recyclerView= view.findViewById(R.id.list);
+        RecyclerView.LayoutManager rel=new GridLayoutManager(getContext(),2);
+        recyclerView.setLayoutManager(rel);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),LinearLayoutManager.VERTICAL));
+        recyclerView.setAdapter(adapter);
 //        list.setAlpha(alpha);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
@@ -128,7 +136,7 @@ public class Mainfragment extends Fragment {
 
 
             }
-        });
+        });*/
         return view;
     }
 }
