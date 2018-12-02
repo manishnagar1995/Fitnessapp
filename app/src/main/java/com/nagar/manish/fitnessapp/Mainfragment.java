@@ -69,12 +69,15 @@ public class Mainfragment extends Fragment {
    //   view = inflater.inflate(R.layout.fragment_mainfragment, container, false);
 
         adapter = new CardAdapter(getContext(),imageId,web);
+
         recyclerView= view.findViewById(R.id.list);
         RecyclerView.LayoutManager rel=new GridLayoutManager(getContext(),2);
         recyclerView.setLayoutManager(rel);
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(adapter);
-//        list.setAlpha(alpha);
+//==================================listview listner=================================================================
+
+        //        list.setAlpha(alpha);
         /*recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -137,6 +140,7 @@ public class Mainfragment extends Fragment {
 
             }
         });*/
+//===================================================================================================================
         return view;
     }
 }

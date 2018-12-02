@@ -42,7 +42,7 @@ public class Nutrition_Tips extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.list_view, container, false);
         // get the reference of Button
-        listview = (ListView) view.findViewById(R.id.list);
+        listview = (ListView) view.findViewById(R.id.l1);
         // perform setOnClickListener on first Button
         ArrayAdapter<String> nu=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,nutritonTips);
         listview.setAdapter(nu);

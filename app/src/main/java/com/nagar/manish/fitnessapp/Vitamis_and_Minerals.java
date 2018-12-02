@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.ListView;
 
 public class Vitamis_and_Minerals extends Fragment {
@@ -27,9 +26,9 @@ public class Vitamis_and_Minerals extends Fragment {
             "Vitamin E",
         //    "Vitamin B12",
             "Calcium",
-            "Iron"
-         //   "Magnesium",
-         //   "Fiber"
+            "Iron",
+            "Magnesium",
+            "Fiber"
 
     } ;
     Integer[] imageId = {
@@ -40,10 +39,10 @@ public class Vitamis_and_Minerals extends Fragment {
             R.drawable.vitamine,
        //     R.drawable.vitamind,
             R.drawable.ca,
-         //   R.drawable.phosphorus,
-            R.drawable.iron
-          //  R.drawable.magnesium,
-          //  R.drawable.fiber
+          //  R.drawable.phosphorus,
+            R.drawable.iron,
+            R.drawable.magnesium,
+            R.drawable.fiber
     };
 
 
@@ -51,8 +50,8 @@ public class Vitamis_and_Minerals extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.gird_view, container, false);
-        lst = (ListView) view.findViewById(R.id.grid);
+        view = inflater.inflate(R.layout.list_view, container, false);
+        lst = (ListView) view.findViewById(R.id.l1);
 
         Customclass adapter=new Customclass(getActivity(),web,imageId);
         lst.setAdapter(adapter);

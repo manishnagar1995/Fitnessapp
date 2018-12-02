@@ -14,14 +14,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.ByteArrayOutputStream;
-
 
 public class Customclass extends ArrayAdapter<String>
 {
     public  Activity context;
     public  String[] web;
-    Bitmap b;
     public Integer[] imageId;
     public Customclass(Activity context, String[] web, Integer[] imageId) {
         super(context, R.layout.gridpiclist, web);
@@ -37,22 +34,14 @@ public class Customclass extends ArrayAdapter<String>
     public View getView(int position, View view, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
 
+        Bitmap b = BitmapFactory.decodeResource(context.getResources(), imageId[position]);
 
         View rowView= inflater.inflate(R.layout.gridpiclist, null, true);
         TextView txtTitle = rowView.findViewById(R.id.txt);
         ImageView imageView = rowView.findViewById(R.id.img);
         txtTitle.setText(web[position]);
-
-      /*  b = BitmapFactory.decodeResource(context.getResources(), imageId[position]);
-       Bitmap scale  = Bitmap.createScaledBitmap(b, 100, 100, false);
-
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        b.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-        byte[] imageInByte = stream.toByteArray();
-        long lengthbmp = imageInByte.length;*/
-
-    //    imageView.setImageBitmap(scale);
-        imageView.setImageResource(Math.toIntExact(imageId[position]));
+        imageView.setImageBitmap(b);
+    //   imageView.setImageResource(imageId[position]);
         return rowView;
     }
 }

@@ -1,6 +1,8 @@
 package com.nagar.manish.fitnessapp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +17,7 @@ public class Home_Remedies extends Fragment {
 
     View view;
     ListView listview;
+
     static int b;
     String[]homeRemediesTips =
             {
@@ -38,7 +41,8 @@ public class Home_Remedies extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.list_view, container, false);
         // get the reference of Button
-        listview = (ListView) view.findViewById(R.id.list);
+        listview = (ListView) view.findViewById(R.id.l1);
+
         // perform setOnClickListener on first Button
         ArrayAdapter<String> fu=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,homeRemediesTips);
         listview.setAdapter(fu);

@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 
 public class Health_tips extends Fragment {
@@ -38,7 +37,7 @@ public class Health_tips extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.list_view, container, false);
 
-        listView = (ListView) view.findViewById(R.id.list);
+        listView = (ListView) view.findViewById(R.id.l1);
         // perform setOnClickListener on first Button
         ArrayAdapter<String> as=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,HealthTips);
         listView.setAdapter(as);

@@ -6,6 +6,8 @@ import android.media.MediaRecorder;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -179,6 +181,7 @@ public class VoiceRecoder extends AppCompatActivity {
         return result == PackageManager.PERMISSION_GRANTED &&
                 result1 == PackageManager.PERMISSION_GRANTED;
     }
+
 
 }
 

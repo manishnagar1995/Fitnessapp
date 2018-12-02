@@ -36,11 +36,14 @@ public class MainActivity extends AppCompatActivity
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
+
+//========================Main fragment call===================================================
         Mainfragment mainfragment = new Mainfragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, mainfragment);
         fragmentTransaction.commit();
 
+//============================Botten Navigation ==================================================
        bottomBar=(BottomNavigationView) findViewById(R.id.bottomBar);
         bottomBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -75,15 +78,16 @@ public class MainActivity extends AppCompatActivity
                 return false;
             }
         });
-
+//========================================ToolBar=================================================
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Health And Nutrition");
+            getSupportActionBar().setTitle("Fitness App");
         }
 
         //toolbar.inflateMenu(R.menu.main);
 
+//========================== Drawer Layout Button add Drawe Layout=======================================================
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
          toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -91,7 +95,7 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
 
-
+//=================== set Listner on Navigation Drawer ======================================
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -161,6 +165,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, mainfragment);
             super.onBackPressed();
             fragmentTransaction.commit();
+
           /*  AlertDialog.Builder dialogCancel = new AlertDialog.Builder(this)
                     .setTitle("discard changes...")
                     .setMessage("are you sure you do not want to save changes to this note?")

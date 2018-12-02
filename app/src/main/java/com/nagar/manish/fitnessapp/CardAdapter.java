@@ -42,13 +42,12 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyHolder> {
     @Override
     public void onBindViewHolder(@NonNull final MyHolder myHolder, int i) {
 
-        //myHolder.imageView.setImageResource(image[i]);
+        myHolder.imageView.setImageResource(image[i]);
 
-        Bitmap b = BitmapFactory.decodeResource(context.getResources(), image[i]);
-        Bitmap scale  = Bitmap.createScaledBitmap(b, 100, 100, false);
+     //   Bitmap b = BitmapFactory.decodeResource(context.getResources(), image[i]);
+     //   Bitmap scale  = Bitmap.createScaledBitmap(b, 100, 100, false);
+        //   myHolder.imageView.setImageBitmap(b);
 
-
-        myHolder.imageView.setImageBitmap(scale);
         myHolder.textView.setText(name[i]);
         final int c=i;
         final AppCompatActivity act=(AppCompatActivity)context;
